@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VolCon 2027 | India's Flagship Volunteering Conference</title>
+  <meta name="description"
+    content="VolCon 2027 — Dates &amp; Venue To Be Announced. Built by the movement, for the movement. 30+ Speakers, 15+ Sessions, 200+ Volunteer Leaders.">
+  <link rel="icon" type="image/png" href="volcon_logo.png">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('volcon-theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       CINEMATIC FULLSCREEN VIDEO PRELOADER
+       Plays VolCon_light_fixed.mp4 in Light Mode, VolCon_dark_fixed.mp4 in Dark Mode with Audio
+       Full screen video without any text or buttons, with only the bottom audio toggle
+       ========================================================================== -->
+  <div id="sitePreloader" class="site-preloader" role="dialog" aria-label="VolCon 2027 Intro Preloader">
+    <video id="preloaderVideo" class="preloader-fullscreen-video" playsinline preload="auto">
+      <source id="preloaderVideoSource" src="VolCon_light_fixed.mp4" type="video/mp4">
+    </video>
+
+    <!-- Floating Audio Mute / Unmute Button in Bottom Right -->
+    <button id="preloaderSoundBtn" class="preloader-mute-btn" aria-label="Toggle Sound" title="Mute / Unmute Audio">
+      <span class="sound-icon-unmuted">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+      </span>
+      <span class="sound-icon-muted" style="display:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+      </span>
+      <span class="sound-label-text">Mute</span>
+    </button>
+  </div>
+
+  <!-- Ambient Glowing Orbs (volcon.in Dark Theme Reference) -->
+  <div class="glow-orb glow-blue" style="top: 80px; left: -100px;"></div>
+  <div class="glow-orb glow-yellow" style="top: 700px; right: -80px;"></div>
+  <div class="glow-orb glow-blue" style="top: 1700px; left: 5%;"></div>
+  <div class="glow-orb glow-yellow" style="top: 3000px; right: 8%;"></div>
+  <div class="glow-orb glow-blue" style="bottom: 900px; left: -60px;"></div>
+
+  <!-- Header Navigation (Heron AI Style Technical Grid) -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- Brand Block with Technical Mark -->
+      <a href="#home" class="brand-block" title="VolCon 2027">
+        <div class="brand-icon-wrap">
+          <img src="volcon_logo.png" alt="VolCon">
+        </div>
+        <div class="brand-title-tech">
+          VolCon<span class="brand-sub-badge">2027</span>
+        </div>
+      </a>
+
+      <!-- Technical Nav Cells with Pixel Canvas & Corner Hook -->
+      <nav class="nav-cells-group">
+        <a href="#home" class="tech-nav-cell active" data-target="home">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">HOME</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#story" class="tech-nav-cell" data-target="story">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">ABOUT</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#participate" class="tech-nav-cell" data-target="participate">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">SPEAKERS</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="gallery.html" class="tech-nav-cell">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">GALLERY</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#scholarships" class="tech-nav-cell" data-target="scholarships">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">SCHOLARSHIPS</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#sponsorship" class="tech-nav-cell" data-target="sponsorship">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">SPONSORS</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#committees" class="tech-nav-cell" data-target="committees">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">COMMITTEES</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#faq" class="tech-nav-cell" data-target="faq">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">FAQ</span>
+          <span class="tech-corner-hook"></span>
+        </a>
+
+        <a href="#register" class="tech-nav-cell cta-accent" data-target="register">
+          <canvas class="pixel-canvas"></canvas>
+          <span class="pixel-pip"></span>
+          <span class="nav-cell-text">TICKETS <span class="nav-arrow">→</span></span>
+          <span class="tech-corner-hook"></span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         01 HOME PAGE
+         COMPLETE BG IS THE VIDEO
+         ========================================== -->
+    <section class="hero-video-landing page-section-view" id="home">
+      <!-- Complete Background Video -->
+      <video id="heroVideo" class="hero-video-bg" autoplay loop muted playsinline poster="video-poster.jpg">
+        <source id="heroVideoSource" src="VolCon_light_fixed.mp4" type="video/mp4">
+      </video>
+
+      <!-- Soft White Clean Overlay for Professional Contrast -->
+      <div class="hero-video-overlay"></div>
+
+      <!-- Hero Content Layered Directly Over Video -->
+      <div class="container hero-content-wrap">
+        <h1 class="hero-title-main">
+          VolCon 2027
+        </h1>
+
+        <p class="hero-tagline">
+          India's Flagship Volunteering Conference. <br>
+          <span class="pencil-note">"Built by the Movement, For the Movement."</span>
+        </p>
+
+        <div class="hero-venue-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Dates &amp; Venue to be announced</span>
+        </div>
+
+        <div class="hero-actions-row">
+          <a href="#register" class="btn-primary-blue">
+            Secure Your Spot Now
+          </a>
+          <a href="#participate" class="btn-primary-green">
+            Become a Speaker
+          </a>
+          <a href="#scholarships" class="btn-primary-gold">
+            View Scholarships
+          </a>
+        </div>
+
+        <!-- 4 Key Numbers Over Background -->
+        <div class="hero-stats-grid">
+          <div class="stat-box">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Speakers</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Sessions</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Volunteer Leaders</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">2 Days</div>
+            <div class="stat-label">Intense Learning</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Video & Audio Controls in Corner -->
+      <div class="video-control-pill">
+        <button id="replayIntroBtn" class="video-toggle-btn" aria-label="Replay Intro Preloader" title="Replay Full Intro Animation">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span>Replay Intro</span>
+        </button>
+        <span class="video-pill-divider">|</span>
+        <button id="heroAudioToggleBtn" class="video-toggle-btn" aria-label="Toggle Hero Audio" title="Toggle Hero Audio (Mute/Unmute)">
+          <span class="hero-audio-muted-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+          </span>
+          <span class="hero-audio-unmuted-icon" style="display:none;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </span>
+          <span class="hero-audio-label">Muted</span>
+        </button>
+        <span class="video-pill-divider">|</span>
+        <button id="videoToggleBtn" class="video-toggle-btn" aria-label="Pause Background Video">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+          <span>Pause Video</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 4 Core Offerings -->
+    <section class="pillars-section">
+      <div class="container pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <h4>Inspirational Keynote Speakers</h4>
+          <p>Global thinkers and grassroots pioneers setting the compass for community volunteer action across India.
+          </p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <path d="M8 9h8"></path>
+              <path d="M8 13h6"></path>
+            </svg>
+          </div>
+          <h4>Thought-Provoking Panel Discussions</h4>
+          <p>Cross-sector leadership conversations between corporate CSR heads, non-profits, and policy advocates.</p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+              </path>
+            </svg>
+          </div>
+          <h4>Engaging Workshops &amp; Skill-building</h4>
+          <p>Actionable, practical toolkits on volunteer recruitment, retention, disaster response, and DEI models.</p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+          </div>
+          <h4>Volunteer Project Showcase</h4>
+          <p>High-impact initiatives demonstrating the real power of volunteers creating grassroots social change.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         OUR STORY: BUILT BY THE MOVEMENT
+         ========================================== -->
+    <section class="story-section page-section-view" id="story">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Built by the Movement, <span class="pencil-underline">For the Movement</span></h2>
+          <p class="section-desc">VolCon began with a simple but powerful belief: Volunteering deserves a space of its
+            own.</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-body">
+            <p class="story-lead">
+              A space not just to show up, but to learn, connect &amp; shape the future of volunteering in India.
+            </p>
+
+            <p>
+              This vision first came alive when <strong>Bhumi</strong> and <strong>AID India</strong> joined hands to
+              create a national platform dedicated entirely to volunteering. At a time when volunteer efforts were
+              powerful but scattered, VolCon brought people together.
+            </p>
+
+            <p>
+              What began as an experiment soon became something much bigger. As the movement grew, so did the collective
+              leadership behind it. <strong>iVolunteer</strong> joined as a co-organiser, strengthening the vision of
+              VolCon as a platform owned not by one organisation, but by the ecosystem itself.
+            </p>
+
+            <div class="story-quote-box">
+              "Volunteers, nonprofit leaders, CSR professionals, and social impact practitioners didn’t just attend;
+              they began to shape VolCon. They curated conversations. They influenced themes. They defined what
+              mattered."
+            </div>
+
+            <p>
+              Since 2020, <strong>Bhumiversal</strong> has produced VolCon, helping scale its ambition and impact.
+              Bringing together global insights, cross-sector collaboration, and deeper conversations on the future of
+              volunteering. But the real turning point came in <strong>2024</strong> when the community itself stepped
+              forward.
+            </p>
+
+            <p>
+              Today, VolCon stands as India’s flagship volunteering conference, where ideas spark action, partnerships
+              are born, and volunteers discover their power to create change.
+            </p>
+          </div>
+
+          <!-- Original Images From Workspace Only -->
+          <div class="story-photos-column">
+            <div class="story-photo-card">
+              <img src="images/5.jpg" alt="150+ Attendees at VolCon">
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="story-timeline">
+          <div class="timeline-card">
+            <div class="timeline-year">2018–19</div>
+            <div class="timeline-desc">Bhumi &amp; AID India launch the pioneering national platform for volunteer
+              efforts.</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-desc">iVolunteer joins as co-organiser. Bhumiversal begins scaling VolCon nationwide.
+            </div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-desc">Cross-sector dialogues on post-pandemic volunteering, tech models, and youth
+              networks.</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-desc">The community steps forward to curate topics, sessions, and define what matters.
+            </div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2027 Flagship</div>
+            <div class="timeline-desc" style="font-weight:600; color:var(--text-main);">The upcoming flagship edition
+              bringing together 30+ speakers, 15+ sessions, and up to 30 scholarships.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         HEAR FROM THE BEST (TESTIMONIALS)
+         ========================================== -->
+    <section class="pillars-section page-section-view" id="testimonials"
+      style="background:var(--bg-section); border-top:1px solid var(--border-light);">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Participant Voices</span>
+          <h2 class="section-title">Hear From <span class="pencil-underline">The Best</span></h2>
+          <p class="section-desc">See what our past participants have to say about VolCon.</p>
+        </div>
+
+        <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="pillar-item">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <img src="images/10.jpg" alt="Participant"
+                style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:1px solid var(--border-light);">
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0;">CSR Program Director</h4>
+                <span class="pencil-note" style="font-size:0.85rem;">Global Technology Firm</span>
+              </div>
+            </div>
+            <p>"VolCon is India's most substantive gathering for corporate volunteering. The sessions on tech-enabled
+              engagement gave our team actionable solutions we implemented immediately."</p>
+          </div>
+
+          <div class="pillar-item">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <img src="images/18.jpg" alt="Participant"
+                style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:1px solid var(--border-light);">
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0;">NGO Executive Director</h4>
+                <span class="pencil-note" style="font-size:0.85rem;">Child Education Network</span>
+              </div>
+            </div>
+            <p>"Attending VolCon on scholarship connected us to mentors and corporate partners who helped us scale our
+              volunteer base across four states. Truly built by the movement."</p>
+          </div>
+
+          <div class="pillar-item">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <img src="images/25.jpg" alt="Participant"
+                style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:1px solid var(--border-light);">
+              <div>
+                <h4 style="font-size:1.05rem; margin-bottom:0;">Youth Volunteer Manager</h4>
+                <span class="pencil-note" style="font-size:0.85rem;">Environment &amp; Civic Action</span>
+              </div>
+            </div>
+            <p>"The energy at VolCon was palpable. Meeting hundreds of people who care about volunteerism as deeply as
+              you do makes you realize you are part of a nationwide fellowship."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         02 PARTICIPATE / BECOME A SPEAKER
+         ========================================== -->
+    <section class="participate-section page-section-view" id="participate">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Call For Speakers</span>
+          <h2 class="section-title">Become a Speaker at <span class="pencil-underline">VolCon 2027</span></h2>
+          <p class="section-desc">Share your volunteer leadership experience and insights on the national stage.</p>
+        </div>
+
+        <div class="participate-grid">
+          <div>
+            <h3 style="font-size:1.6rem; color:var(--blue-dark); margin-bottom:14px;">
+              Share Your Volunteer Leadership Experience
+            </h3>
+
+            <p style="color:var(--text-muted); margin-bottom:16px;">
+              Confirmed participants have the opportunity to be considered as speakers or session leaders. As we work on
+              finalizing the event agenda, we will actively engage with confirmed participants. If we find a suitable
+              match between your profile and relevant topics, we will certainly approach you.
+            </p>
+
+            <div
+              style="background:var(--blue-subtle); border-left:4px solid var(--blue-primary); padding:16px; border-radius:0 6px 6px 0; margin-bottom:24px;">
+              <strong>Speaker Form:</strong> Submit your proposal, talk outline, or recommendation to be part of our 15+
+              curated plenary and breakout tracks.
+            </div>
+
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <a href="https://form.jotform.com/252423197551053" target="_blank" rel="noopener noreferrer"
+                class="btn-primary-green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                </svg>
+                <span>Apply Now</span>
+              </a>
+              <a href="#newsletter" class="btn-outline-blue">
+                Get Updates
+              </a>
+            </div>
+          </div>
+
+          <div class="speaker-photo-box">
+            <img src="images/11.jpg" alt="VolCon Plenary Stage with Esteemed Speakers">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         03 REGISTER / TICKETS
+         ========================================== -->
+    <section class="tickets-section page-section-view" id="register">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Registration &amp; Passes</span>
+          <h2 class="section-title">Secure Your Spot <span class="pencil-underline">Now</span></h2>
+          <p class="section-desc">Join 200+ volunteer leaders, non-profit directors, and corporate CSR heads.</p>
+          <p class="pencil-note" style="margin-top:8px;">
+            "VolCon is a conference on volunteering for org-level decision makers and volunteer managers."
+          </p>
+        </div>
+
+        <div class="tickets-grid">
+          <!-- Corporate Card (Blue Theme) -->
+          <div class="ticket-card card-blue">
+            <div>
+              <span class="ticket-type-label">Corporate Track</span>
+              <h3 class="ticket-title">Corporate – Premium Tickets</h3>
+              <p style="font-size:0.9rem; color:var(--text-muted);">
+                For corporates, corporate foundations, and for-profit intermediaries who engage employees actively in
+                volunteer activities.
+              </p>
+
+              <div class="ticket-price-box">
+                <div class="price-val">To be announced</div>
+                <div style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">Single entry per ticket</div>
+              </div>
+
+              <ul class="ticket-benefits">
+                <li> Access to all plenary sessions &amp; keynotes</li>
+                <li> Lunch included for both conference days</li>
+                <li> Exclusive corporate volunteer leadership circles</li>
+                <li> Official GST invoice issued upon payment</li>
+              </ul>
+            </div>
+
+            <a href="https://wordpress-567902-3768742.cloudwaysapps.com/tickets/" target="_blank"
+              rel="noopener noreferrer" class="btn-primary-blue" style="text-align:center;">
+              Official Ticket Link →
+            </a>
+          </div>
+
+          <!-- NGO Card (Green Theme) -->
+          <div class="ticket-card card-green">
+            <div>
+              <span class="ticket-type-label">Non-Profit Track</span>
+              <h3 class="ticket-title">NGO – Premium Tickets</h3>
+              <p style="font-size:0.9rem; color:var(--text-muted);">
+                For non-profit organizations, colleges, schools, and non-profit intermediaries actively engaged in
+                volunteer activities.
+              </p>
+
+              <div class="ticket-price-box">
+                <div class="price-val">To be announced</div>
+                <div style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">Single entry per ticket</div>
+              </div>
+
+              <ul class="ticket-benefits">
+                <li> Access to all workshops and panel tracks</li>
+                <li> Lunch included for both conference days</li>
+                <li> Peer networking with volunteer leaders nationwide</li>
+                <li> Official GST invoice issued upon payment</li>
+              </ul>
+            </div>
+
+            <a href="https://wordpress-567902-3768742.cloudwaysapps.com/tickets/" target="_blank"
+              rel="noopener noreferrer" class="btn-primary-green" style="text-align:center;">
+              Official Ticket Link →
+            </a>
+          </div>
+        </div>
+
+        <!-- Explicit Registration Terms from User Copy -->
+        <div class="rules-alert-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <span>Terms &amp; Conditions (Registration &amp; Attendance)</span>
+          </h4>
+          <ul>
+            <li>The registration cost mentioned is for a single entry to the conference.</li>
+            <li>The registration fee is non-refundable except in the case of formal international visa rejection.</li>
+            <li><strong>Strict Organization Limit:</strong> <em>Only 2 participants can register from an
+                organization</em>, whether an NGO, a corporate, a college, or a foundation.</li>
+            <li>If more than 2 participants from the same organization register, the extra ticket(s) will be canceled,
+              and the amount will be refunded.</li>
+            <li>Nobody will be allowed admission to the conference without a valid ticket or pass.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         04 SCHOLARSHIPS
+         ========================================== -->
+    <section class="scholarships-section page-section-view" id="scholarships">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Opportunities</span>
+          <h2 class="section-title">VolCon 2027 <span class="pencil-underline">Scholarships</span></h2>
+          <p class="section-desc">Up to 30 fully funded scholarships for grassroots volunteer leaders and researchers.
+          </p>
+        </div>
+
+        <div class="scholarship-grid">
+          <div>
+            <div class="deadline-tag">
+              Applications Open Soon • Up to 30 Scholarships
+            </div>
+
+            <h3 style="font-size:1.6rem; color:var(--blue-dark); margin-bottom:12px;">
+              Great opportunity for your volunteer manager / engager
+            </h3>
+
+            <p style="color:var(--text-muted); font-size:1rem; margin-bottom:16px;">
+              Are you a volunteer manager or organization leader looking to level up your impact? VolCon 2027 is
+              offering <strong>up to 30 scholarships</strong> to passionate individuals like you!
+            </p>
+
+            <div
+              style="background:var(--white); border:1px solid var(--border-light); border-radius:6px; padding:18px; margin-bottom:20px;">
+              <h4 style="font-size:1.1rem; color:var(--blue-primary); margin-bottom:8px;">What’s in Store?</h4>
+              <ul style="list-style:none; font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+                <li> 2 days of immersive learning and networking</li>
+                <li> Expert-led workshops &amp; panel discussions</li>
+                <li> <strong>Good Deeds Day Workshop</strong> &amp; leadership tracks</li>
+                <li> Meet 200+ volunteer leaders, corporate CSR heads &amp; changemakers</li>
+                <li> <strong>Shared accommodation</strong> for non-local residents</li>
+              </ul>
+            </div>
+
+            <div class="dual-info-boxes">
+              <div class="info-card">
+                <h4>Who Should Apply?</h4>
+                <ul>
+                  <li>New to VolCon (if you’ve attended before, this isn’t for you)</li>
+                  <li>Managed 50+ volunteers for 150+ hours in the last year (Apr – Dec 2026)</li>
+                  <li>Volunteered 100+ hours yourself in the last year (Apr – Dec 2026)</li>
+                  <li>Organization with annual budget below ₹50L preferred (Apr 2025 – Mar 2026)</li>
+                  <li>OR currently researching volunteering</li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <h4>Scholarship Exclusions</h4>
+                <ul>
+                  <li>Travel &amp; commutation expenses from your home/work location</li>
+                  <li>Meals &amp; tea/coffee other than those included in the conference &amp; GDD Workshop</li>
+                  <li>Any other personal overhead expenses</li>
+                </ul>
+              </div>
+            </div>
+
+            <a href="https://form.jotform.com/250299021707051" target="_blank" rel="noopener noreferrer"
+              class="btn-primary-green" style="font-size:1rem; padding:12px 28px;">
+              Apply Now via Scholarship Form →
+            </a>
+          </div>
+
+          <!-- Interactive Eligibility Checker Tool & Photo -->
+          <div>
+            <div class="scholarship-photo-box">
+              <img src="images/4.jpg" alt="VolCon 2027 Scholarships &amp; Learning Opportunities">
+            </div>
+
+            <div class="quiz-container">
+              <h4 style="font-size:1.2rem; color:var(--blue-primary); margin-bottom:6px;">
+                Scholarship Eligibility Checklist
+              </h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">
+                Select your criteria to verify your application profile:
+              </p>
+
+              <div class="quiz-options-list">
+                <label class="quiz-option-label">
+                  <input type="checkbox" id="scNew" class="sc-chk">
+                  <span>I am <strong>New to VolCon</strong> (have not attended previous editions).</span>
+                </label>
+                <label class="quiz-option-label">
+                  <input type="checkbox" id="scManaged" class="sc-chk">
+                  <span>Managed <strong>50+ volunteers for 150+ hours</strong> (Apr – Dec 2026).</span>
+                </label>
+                <label class="quiz-option-label">
+                  <input type="checkbox" id="scPersonal" class="sc-chk">
+                  <span>Volunteered <strong>100+ hours myself</strong> in the last year.</span>
+                </label>
+                <label class="quiz-option-label">
+                  <input type="checkbox" id="scBudget" class="sc-chk">
+                  <span>Organization annual budget <strong>below ₹50L</strong> OR currently researching
+                    volunteering.</span>
+                </label>
+              </div>
+
+              <div id="quizResult" class="val-msg"></div>
+
+              <div
+                style="margin-top:16px; border-top:1px solid var(--border-light); padding-top:12px; font-size:0.85rem; color:var(--text-muted);">
+                <span class="pencil-note">India’s Largest Volunteering Conference</span> • Up to 30 Scholarships
+                Awarded.
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         05 SPONSORSHIP
+         ========================================== -->
+    <section class="sponsorship-section page-section-view" id="sponsorship">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Partnership</span>
+          <h2 class="section-title">Sponsorship <span class="pencil-underline">Opportunities</span></h2>
+          <p class="section-desc">Partner with India’s leading movement shaping the future of volunteering.</p>
+          <p class="pencil-note" style="margin-top:6px;">
+            "Your company or organization can become a part of VolCon 2027 (India’s Largest Volunteering Conference)."
+          </p>
+        </div>
+
+        <div class="sponsorship-grid">
+          <div>
+            <h3 style="font-size:1.6rem; color:var(--blue-dark); margin-bottom:12px;">
+              Partner with India's Premier Volunteering Movement
+            </h3>
+            <p style="color:var(--text-muted); line-height:1.65; margin-bottom:20px;">
+              An initiative by Bhumi and iVolunteer, VolCon 2027 brings together leaders from top corporates,
+              non-profits, intermediaries, youth networks, and decision-makers for two days of intense collaboration.
+            </p>
+
+            <div
+              style="background:var(--bg-section); border:1px solid var(--border-light); border-radius:6px; padding:20px; margin-bottom:24px;">
+              <h4 style="font-size:1.1rem; color:var(--blue-primary); margin-bottom:10px;">Why Sponsor?</h4>
+              <ul style="list-style:none; font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+                <li>• Corporate CSR leadership and brand visibility across India</li>
+                <li>• Connect directly with 200+ qualified volunteer program managers</li>
+                <li>• Support 30 grassroots volunteer scholarships</li>
+                <li>• Shape national volunteering frameworks and thought leadership</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sponsorship Form Matching Requested Fields -->
+          <div class="sponsor-form-box">
+            <h3 style="font-size:1.35rem; color:var(--blue-primary); margin-bottom:4px;">
+              Sponsorship Interest Form
+            </h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:18px;">
+              Submit your corporate details to receive our partnership deck:
+            </p>
+
+            <form id="spForm">
+              <div style="margin-bottom:12px;">
+                <label for="fName" class="input-label">Your Name *</label>
+                <input type="text" id="fName" class="plain-input" placeholder="Enter your full name" required>
+              </div>
+
+              <div style="margin-bottom:12px;">
+                <label for="fPhone" class="input-label">Phone Number *</label>
+                <input type="tel" id="fPhone" class="plain-input" placeholder="e.g. +91 98765 43210" required>
+              </div>
+
+              <div style="margin-bottom:12px;">
+                <label for="fEmail" class="input-label">Email ID *</label>
+                <input type="email" id="fEmail" class="plain-input" placeholder="name@company.com" required>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label for="fCorp" class="input-label">Name of the Corporate *</label>
+                <input type="text" id="fCorp" class="plain-input" placeholder="Company / Foundation name" required>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <button type="submit" class="btn-primary-gold" style="width:100%; justify-content:center;">
+                  Submit Interest
+                </button>
+                <a href="https://form.jotform.com/232083194254454" target="_blank" rel="noopener noreferrer"
+                  style="font-size:0.85rem; text-align:center; color:var(--blue-primary); text-decoration:underline;">
+                  Direct JotForm Link (232083194254454)
+                </a>
+              </div>
+            </form>
+
+            <div id="spOutput" class="val-msg valid" style="display:none; margin-top:14px;"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         06 COMMITTEES
+         ========================================== -->
+    <section class="committees-section page-section-view" id="committees">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Governance &amp; Diversity</span>
+          <h2 class="section-title">VolCon 2027 <span class="pencil-underline">Committees</span></h2>
+          <p class="section-desc">Inclusive, cross-sector governance representing the diversity of Indian volunteering.
+          </p>
+          <p class="pencil-note" style="margin-top:8px;">
+            "Through these committees, the design and conduct of VolCon can be made more inclusive, participative and
+            representative of the diversity of the volunteering sector in India."
+          </p>
+        </div>
+
+        <!-- Real Stage Photo from Workspace (images/14.jpg) -->
+        <div class="committee-stage-banner">
+          <div>
+            <h3 style="font-size:1.4rem; color:var(--blue-primary); margin-bottom:8px;">
+              Designed and Governed by the Volunteering Sector
+            </h3>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
+              VolCon’s committees bring together domain experts across corporations, NGOs, and academia to steer agenda
+              curation, participant experience, and partnership models.
+            </p>
+            <a href="https://wordpress-567902-3768742.cloudwaysapps.com/committees/" target="_blank"
+              rel="noopener noreferrer" class="btn-primary-blue" style="font-size:0.9rem;">
+              Apply to Join a Committee →
+            </a>
+          </div>
+          <div>
+            <img src="images/14.jpg" alt="VolCon Committee Members Slide Presentation on Stage"
+              style="width:100%; height:200px; object-fit:cover; border-radius:6px; border:1px solid var(--border-light);">
+          </div>
+        </div>
+
+        <!-- 6 Committees Details -->
+        <div class="committees-grid">
+
+          <!-- Corporate Committee -->
+          <div class="comm-card">
+            <div>
+              <h4>Corporate Committee</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To maximise participation and learning of corporate participants.
+              </p>
+              <ul>
+                <li>• Determining agenda based on corporate volunteer needs</li>
+                <li>• Identifying and enlisting speakers for corporate tracks</li>
+                <li>• Maximising employee volunteer leader attendance</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Strong corporate network, CSR understanding, teamwork &amp; decision making.
+            </div>
+          </div>
+
+          <!-- NGO Committee -->
+          <div class="comm-card">
+            <div>
+              <h4>NGO Committee</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To maximise participation and learning of NGO participants.
+              </p>
+              <ul>
+                <li>• Determining NGO agenda based on grassroots needs</li>
+                <li>• Enlisting speakers engaging volunteers at scale</li>
+                <li>• Driving nationwide NGO participation</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Grassroots network, understanding NGO volunteer challenges, communication.
+            </div>
+          </div>
+
+          <!-- Program Committee -->
+          <div class="comm-card">
+            <div>
+              <h4>Program Committee (7–9 Members)</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To ensure every participant has a great conference experience.
+              </p>
+              <ul>
+                <li>• Overall plan: plenary sessions, stalls &amp; side events</li>
+                <li>• Pre/post communication, welcome kits &amp; surveys</li>
+                <li>• Interactive games &amp; WhatsApp engagement</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Event design, large team engagement, attention to detail.
+            </div>
+          </div>
+
+          <!-- Continuous Learning -->
+          <div class="comm-card">
+            <div>
+              <h4>Continuous Learning</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To sustain learning and capacity building year-round.
+              </p>
+              <ul>
+                <li>• Curation of toolkits, insights, and research papers</li>
+                <li>• Structuring post-conference knowledge sharing</li>
+                <li>• Connecting alumni cohorts across editions</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Research affinity, curriculum curation, mentoring.
+            </div>
+          </div>
+
+          <!-- Finance Committee -->
+          <div class="comm-card">
+            <div>
+              <h4>Finance Committee</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To ensure fiscal responsibility and sponsorship stewardship.
+              </p>
+              <ul>
+                <li>• Budget allocation and venue logistics budgeting</li>
+                <li>• Supporting corporate sponsorship outreach</li>
+                <li>• Managing scholarship fund disbursements</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Budget management, corporate development, governance.
+            </div>
+          </div>
+
+          <!-- Marketing Committee -->
+          <div class="comm-card">
+            <div>
+              <h4>Marketing Committee</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">
+                To amplify VolCon's mission across media &amp; youth channels.
+              </p>
+              <ul>
+                <li>• Outreach campaigns for attendee registration</li>
+                <li>• Storytelling, volunteer spotlights &amp; PR</li>
+                <li>• Social media and partner network outreach</li>
+              </ul>
+            </div>
+            <div class="comm-skills">
+              <strong>Skills:</strong> Digital marketing, campaign leadership, media ties.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Structure & Expectations -->
+        <div class="comm-structure-row">
+          <div class="info-card">
+            <h4>Structure and Working of the Committees</h4>
+            <ul>
+              <li><strong>5 Members:</strong> Each committee will have five members who bring relevant domain
+                expertise.</li>
+              <li><strong>Chairperson:</strong> Led by a chairperson (preferably a previous VolCon member) who
+                oversees activities and facilitates meetings.</li>
+              <li><strong>Members:</strong> Selected based on qualifications or appointed by relevant stakeholders.
+              </li>
+              <li><strong>Roles &amp; Responsibilities:</strong> Task execution, research, decision-making, and
+                reporting.</li>
+              <li><strong>Meeting Schedule:</strong> Regular meetings to discuss progress, address challenges, and
+                coordinate.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>Expectations, Benefits &amp; Rewards</h4>
+            <ul>
+              <li><strong>Commitment:</strong> ~2 hours/week (may increase closer to event date).</li>
+              <li><strong>Meetings:</strong> Attend at least 75% of meetings, establish agendas, and share minutes.
+              </li>
+              <li><strong>Networking:</strong> Connect with peers across committees and sector leaders.</li>
+              <li><strong>Exposure:</strong> Immerse in innovative ideas, best practices, and industry trends.</li>
+              <li><strong>Participation:</strong> Subject to sufficient sponsorship, participation could be partially
+                or fully covered.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         07 NEWSLETTER
+         ========================================== -->
+    <section class="newsletter-section page-section-view" id="newsletter">
+      <div class="container">
+
+        <div class="newsletter-box">
+          <span class="section-label">Stay Connected</span>
+          <h2 style="font-size:2.2rem; color:var(--blue-dark); margin-bottom:8px;">
+            Subscribe to Our <span class="pencil-underline">Newsletter</span>
+          </h2>
+          <p style="font-size:0.95rem; color:var(--text-muted);">
+            Receive speaker announcements, ticket drops, scholarship releases, and conference updates.
+          </p>
+
+          <form id="nlForm" class="newsletter-form">
+            <input type="email" id="nlEmail" class="plain-input" placeholder="Enter your email address" required
+              style="background:var(--white);">
+            <button type="submit" class="btn-primary-green" style="white-space:nowrap;">
+              Subscribe
+            </button>
+          </form>
+
+          <div style="margin-top:14px;">
+            <a href="https://form.jotform.com/223388949970475" target="_blank" rel="noopener noreferrer"
+              style="font-size:0.85rem; color:var(--blue-primary); text-decoration:underline;">
+              Official JotForm Link (223388949970475)
+            </a>
+          </div>
+
+          <div id="nlOutput" class="val-msg valid" style="display:none; margin-top:14px;"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         08 FREQUENTLY ASKED QUESTIONS
+         ========================================== -->
+    <section class="faq-section page-section-view" id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Questions &amp; Answers</span>
+          <h2 class="section-title">Frequently Asked <span class="pencil-underline">Questions</span></h2>
+          <p class="section-desc">Everything you need to know about VolCon 2027 participation and attendance.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="faq-search-wrapper">
+          <input type="text" id="faqSearch" class="plain-input"
+            placeholder="Search questions (e.g., tickets, refund, visa, speaker, lunch)...">
+        </div>
+
+        <div class="faq-accordion-box" id="faqList">
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>What is VolCon?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              VolCon is India's premier conference on volunteering. It is a dynamic event that aims to ignite the spirit
+              of volunteerism by bringing together NGOs, corporations, intermediaries, foundations, and individuals that
+              actively engage volunteers.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>How do I purchase tickets for VolCon 2027?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              You can purchase tickets for VolCon 2027 by visiting the ticketing page on the website and following the
+              registration instructions: <a href="https://wordpress-567902-3768742.cloudwaysapps.com/tickets/"
+                target="_blank" style="color:var(--blue-primary); text-decoration:underline;">Ticketing Page</a>.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Who is eligible for NGO vs Corporate Registration?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <strong>NGO Participants:</strong> Non-profit organizations, colleges, schools, and non-profit
+              intermediaries who are actively engaged in meaningful and regular volunteer activities.<br><br>
+              <strong>Corporate Participants:</strong> Corporates, corporate foundations, and for-profit intermediaries
+              who engage employees actively in volunteer activities.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Can individuals attend without an organization?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              The conference is suited for organizations engaging volunteers. Please check the specific agenda before
+              deciding to join VolCon. Please watch this space for events like VolCon+, which are suitable for
+              individual volunteering enthusiasts.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>What is the cost of the ticket?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Do check our Tickets tab for more details once prices are officially announced.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Does the ticket include accommodation and travel expenses?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              No, the ticket price does not include accommodation, travel, breakfast, or dinner expenses. Attendees are
+              responsible for making their own travel and accommodation arrangements. Lunch is provided during the
+              conference days.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Is there a limit to the number of participants from one organization?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Yes, only two participants are allowed to register from any organization, regardless of whether it's an
+              NGO, corporate, college, or foundation. If more than 2 participants register, extra tickets will be
+              canceled and refunded.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>After completing the payment, will I receive an email confirmation and GST invoice?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Yes, once your payment is completed you will get an email confirmation with details and a GST invoice. If
+              you do not receive it within 24 hours, check your spam folder and contact volcon@bhumi.ngo.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>What is the return policy for conference registration fees?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              The registration fee for VolCon 2027 is non-refundable. However, if an international participant's visa
+              application is declined and they provide a formal letter of visa rejection, a refund for their conference
+              registration fees will be initiated.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Can I transfer my ticket to someone else if I can't attend?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Yes, you can request to substitute another person from the same organization to attend in your place.
+              Requests for substitution must be made in writing at least 7 days before the event start date. Transfer of
+              tickets across organizations is not permitted.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>What are the different types of committees and their purpose?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              NGO, Corporate, Program, Continuous Learning, Finance and Marketing are the 6 committees for VolCon 2027.
+              These committees are involved in designing the agenda flow, planning logistics, initiating sponsorship
+              conversations, outreach, and participant communication.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>What is the agenda for VolCon 2027 and who finalizes it?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              The detailed agenda, including session timings, topics, and speakers, will be released closer to the event
+              date. VolCon’s agenda is set by 2 volunteering committees: the NGO &amp; Corporate Committees drive the
+              tracks and finalize speakers.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-header-btn">
+              <span>Can I be a speaker, conduct a session, or recommend a speaker?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              Confirmed participants have the opportunity to be considered as speakers or session leaders. You can also
+              apply directly via our <a href="https://form.jotform.com/252423197551053" target="_blank"
+                style="color:var(--blue-primary); text-decoration:underline;">Speaker JotForm</a>.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VENUE & DIRECTIONS (BIC)
+         ========================================== -->
+    <section class="venue-section page-section-view" id="venue">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Location &amp; Venue</span>
+          <h2 class="section-title">Conference <span class="pencil-underline">Venue</span></h2>
+          <p class="section-desc">Host city and facility details for VolCon 2027.</p>
+        </div>
+
+        <div class="venue-grid">
+          <div>
+            <h3 style="font-size:1.5rem; color:var(--blue-dark); margin-bottom:12px;">
+              Host Facility &amp; Location
+            </h3>
+
+            <p style="font-size:1.02rem; color:var(--text-main); margin-bottom:16px; line-height:1.6;">
+              VolCon 2027 will take place in a premier convention space designed for large-scale keynotes, parallel
+              track workshops, and community networking.
+            </p>
+
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6; margin-bottom:24px;">
+              Complete transit directions, airport access guides, venue maps, and recommended delegate accommodation
+              options will be updated here.
+            </p>
+
+            <div>
+              <a href="#newsletter" class="btn-primary-blue">
+                Stay Updated
+              </a>
+            </div>
+          </div>
+
+          <!-- Original Conference Photos From images Folder (15, 13, 20) -->
+          <div class="venue-photos-row">
+            <div class="venue-photo-item">
+              <img src="images/15.jpg" alt="Conference Auditorium Stage">
+            </div>
+            <div class="venue-photo-item">
+              <img src="images/13.jpg" alt="Auditorium Seating & Ambiance">
+            </div>
+            <div class="venue-photo-item">
+              <img src="images/20.jpg" alt="Breakout Workshop Session Room">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CURRENT DRIVERS (BHUMI & IVOLUNTEER)
+         ========================================== -->
+    <section class="drivers-section page-section-view" id="drivers">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Initiative By</span>
+          <h2 class="section-title">Current <span class="pencil-underline">Drivers</span></h2>
+          <p class="section-desc">
+            An initiative by Bhumi and iVolunteer, VolCon 2027 will bring leaders from corporates, nonprofits,
+            intermediaries, youth networks and other stakeholders for 2 days of intense learning.
+          </p>
+        </div>
+
+        <div class="drivers-grid">
+          <div class="driver-box">
+            <h3 style="font-size:1.4rem; color:var(--blue-primary); margin-bottom:10px;">Bhumi</h3>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.65;">
+              Bhumi is one of India’s largest independent youth volunteer non-profit organisations. Bhumi, as a
+              platform, enables over 94,000 volunteers across 12 cities in India for causes like education, environment,
+              animals and community welfare.
+            </p>
+          </div>
+
+          <div class="driver-box">
+            <h3 style="font-size:1.4rem; color:var(--blue-primary); margin-bottom:10px;">iVolunteer</h3>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.65;">
+              iVolunteer is a social enterprise that promotes volunteering. Our mission is to bring volunteers and
+              organisations together to share time, skills and passion to promote India’s social development.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-inner">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="lightbox-img-box">
+        <img id="lightboxImg" src="" alt="VolCon Archive Photo">
+      </div>
+      <div class="lightbox-footer">
+        <div id="lightboxCaption" class="lightbox-caption-text"></div>
+        <div style="display:flex; gap:8px;">
+          <button id="lightboxPrev" class="btn-outline-blue"
+            style="padding:6px 14px; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Prev</span>
+          </button>
+          <button id="lightboxNext" class="btn-outline-blue"
+            style="padding:6px 14px; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
+            <span>Next</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" title="Back to top" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- Shared Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+
+        <!-- Col 1: Brand & Identity -->
+        <div class="footer-brand-wrap">
+          <a href="#home" class="footer-brand-header">
+            <div class="footer-logo-box">
+              <img src="volcon_logo.png" alt="VolCon Logo">
+            </div>
+            <div class="footer-brand-title">
+              VolCon<span>2027</span>
+            </div>
+          </a>
+          <div class="footer-tagline pencil-note">
+            "Built by the Movement, For the Movement."
+          </div>
+          <p class="footer-desc">
+            India’s flagship conference uniting non-profit leaders, corporate CSR heads, and changemakers to shape the
+            future of volunteering.
+          </p>
+          <div class="footer-partners-badge">
+            <span>An initiative by</span>
+            <strong>Bhumi</strong> &amp; <strong>iVolunteer</strong>
+            <span>• Produced by</span>
+            <strong>Bhumiversal</strong>
+          </div>
+        </div>
+
+        <!-- Col 2: Conference Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Conference</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">About VolCon</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="#participate">Call for Speakers</a></li>
+            <li><a href="#register">Tickets &amp; Passes</a></li>
+            <li><a href="#scholarships">Scholarships</a></li>
+            <li><a href="#sponsorship">Sponsorship</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Governance & Information -->
+        <div>
+          <h4 class="footer-col-title">Information</h4>
+          <ul class="footer-links-list">
+            <li><a href="#committees">Committees</a></li>
+            <li><a href="#venue">Venue &amp; Location</a></li>
+            <li><a href="#drivers">Current Drivers</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Connected & Newsletter -->
+        <div>
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <p class="footer-desc">
+            Subscribe for conference announcements, speaker line-ups, and ticket releases.
+          </p>
+          <div class="footer-subscribe-box">
+            <form action="#newsletter" method="GET" class="footer-newsletter-row">
+              <input type="email" class="footer-input" placeholder="Your email address" required>
+              <button type="submit" class="footer-btn">Subscribe</button>
+            </form>
+          </div>
+          <div class="footer-contact-row">
+            <div>Questions? Email the team:</div>
+            <a href="mailto:volcon@bhumi.ngo">volcon@bhumi.ngo</a>
+            <div style="color:var(--gold-bright); font-size:0.8rem; margin-top:4px;">
+              #VolCon2027 • #VolunteeringIndia
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2027 VolCon — All rights reserved. Built by the movement, for the movement.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="#home">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  <!-- Floating Quick Theme Switcher Pill -->
+  <button id="floatingThemeToggle" class="floating-theme-btn" aria-label="Toggle Theme" title="Toggle Light / Dark Mode (Press T)">
+    <span class="floating-theme-icon-light">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </span>
+    <span class="floating-theme-icon-dark">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </span>
+    <span class="floating-theme-text">Dark Mode</span>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
